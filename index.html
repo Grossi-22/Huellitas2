@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./Styles/style.css">
+    <title>Huellitas</title>
+    <link rel="shortcut icon" href="./img/fav icon.png" type="png">
+  </head>
+  <body>
+    <!-------------------------------------------------- HEADER -------------------------------------------------->
+    <header>
+      <!---------------------------------- Navbar de inicio sesión ----------------------------------->
+      <nav class="navbar d-flex justify-content-center btop-fondo">
+        <div class="container-fluid row px-0">
+          <a class="navbar-brand me-0 px-3 p-0 col-6" href="#"><img src="./img/logo negro.png" class="img-fluid" alt="Logo" width="200vw"></a>
+          <form class="d-flex col-6 justify-content-end">
+            <button type="button" class="btn text-nowrap btn-light rounded-pill border-0 boton-h1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Iniciar Sesión
+            </button>
+            <!-- Modal -->
+            <div class="modal fade modal-bg" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content card-login mt-5">
+                  <div class="container pt-3">
+                    <h5 class="modal-title text-light" id="exampleModalLabel">Iniciar Sesión</h5>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="container mb-3 col-11 px-0">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                        <div id="emailHelp" class="form-text">No compartas ésta información con nadie...</div>
+                      </div>
+                      <div class="container mb-3 col-11 px-0">
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+                      </div>
+                      <div class="mb-3 ps-5 form-check text-light">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Recuérdame</label>
+                      </div>
+                      <div class="row submitbtn justify-content-center">
+                        <button type="submit" class="btn btn-warning col-8">Iniciar Sesión</button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="container justify-content-center">
+                    <div class="row col-12 m-0 pb-3 align-items-center">
+                      <span class="register col-12 col-lg-6 px-0 text-center text-light registrate">Si no tenes cuenta Registrate
+                        <a class="btn text-primary px-0 registrate-aqui" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Aqui</a>
+                      </span>
+                      <button type="button" class="btn col-6 col-lg-3 d-flex justify-content-center text-light boton-hov" data-bs-dismiss="modal">Cerrar</button>
+                      <button type="button" class="btn col-6 col-lg-3 d-flex justify-content-center text-light boton-hov">Guardar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="modal fade modal-bg" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content card-login">
+                <div>
+                  <h5 class="modal-title text-light container pt-3" id="exampleModalToggleLabel2">Crear Cuenta</h5>
+                </div>
+                <div class="modal-body">
+                  <form class="row g-3">
+                    <div class="col-md-12 mt-0">
+                      <label for="inputEmail4" class="form-label"></label>
+                      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputPassword4" class="form-label"></label>
+                      <input type="password" class="form-control" id="inputPassword4" placeholder="Contraseña">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputPassword4" class="form-label"></label>
+                      <input type="password" class="form-control" id="inputPassword4" placeholder="Repetir Contraseña">
+                    </div>
+                    <div class="col-12">
+                      <label for="inputAddress" class="form-label"></label>
+                      <input type="text" class="form-control" id="inputAddress" placeholder="Dirección">
+                    </div>
+                    <div class="col-12">
+                      <label for="inputAddress2" class="form-label"></label>
+                      <input type="text" class="form-control" id="inputAddress2" placeholder="Localidad">
+                    </div>
+                    <div class="col-md-12">
+                      <label for="inputCity" class="form-label"></label>
+                      <input type="text" class="form-control" id="inputCity" placeholder="Provincia">
+                    </div>
+                    <div class="container py-3">
+                      <div class="row">
+                        <div class="d-flex col-6">
+                          <button type="submit" class="btn btn-warning bg-lightblue border-0 boton-hov">Registrarse</button>
+                        </div>
+                        <div class="container d-flex justify-content-end col-6">
+                          <a class="btn btn-warning border-0 boton-hov" data-bs-target="#exampleModal" data-bs-toggle="modal">Volver</a>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+      <!--------------------------------------- Navbar de menu --------------------------------------------> 
+      <nav class="navbar navbar-expand-lg navbar-dark d-flex justify-content-between bbot-fondo navbar-fix">
+        <div class="container-fluid w-100 px-0">
+          <div class="container col-6 px-0 mx-0">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link px-3 text-light" aria-current="page" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-3 text-light" href="#nosotros">Sobre nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-3 text-light" href="#contacto">Contacto</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-3 text-light" href="./pages/error404.html">¿Cómo donar?</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <form class="d-flex align-self-start col-6">
+            <div class="container d-flex justify-content-end">
+              <button type="button" class="btn btn-light rounded-pill px-1 border-0 boton-h2" data-bs-toggle="modal" data-bs-target="#modal-ayuda">Ajustar Búsqueda</button>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade modal-bg" id="modal-ayuda" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content card-login mt-5">
+                  <div class="container pt-3">
+                    <h5 class="modal-title text-light text-center" id="exampleModalLabel1">Encuentra tu Match ideal</h5>
+                  </div>
+                  <div class="modal-body row">
+                    <div class="col-6 mb-4">
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>Especie</option>
+                        <option value="1">Perro</option>
+                        <option value="2">Gato</option>
+                      </select>
+                  </div>
+                    <div class="col-6 mb-4">
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>Provincia</option>
+                        <option value="Buenos Aires">Buenos Aires</option>
+                        <option value="Buenos Aires Capital">Buenos Aires Capital</option>
+                        <option value="Catamarca">Catamarca</option>
+                        <option value="Chaco">Chaco</option>
+                        <option value="Chubut">Chubut</option>
+                        <option value="Cordoba">Cordoba</option>
+                        <option value="Corrientes">Corrientes</option>
+                        <option value="Entre Rios">Entre Rios</option>
+                        <option value="Formosa">Formosa</option>
+                        <option value="Jujuy">Jujuy</option>
+                        <option value="La Pampa">La Pampa</option>
+                        <option value="La Rioja">La Rioja</option>
+                        <option value="Mendoza">Mendoza</option>
+                        <option value="Misiones">Misiones</option>
+                        <option value="Neuquen">Neuquen</option>
+                        <option value="Rio Negro">Rio Negro</option>
+                        <option value="Salta">Salta</option>
+                        <option value="San Juan">San Juan</option>
+                        <option value="San Luis">San Luis</option>
+                        <option value="Santa Cruz">Santa Cruz</option>
+                        <option value="Santa Fe">Santa Fe</option>
+                        <option value="Santiago del Estero">Santiago del Estero</option>
+                        <option value="Tierra del Fuego">Tierra del Fuego</option>
+                        <option value="Tucuman">Tucuman</option>
+                      </select>
+                    </div>
+                    <div class="col-6 mb-2">
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>Sexo</option>
+                        <option value="1">Macho</option>
+                        <option value="2">Hembra</option>
+                      </select>
+                    </div>
+                    <div class="col-6 mb-2">
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>Tamaño</option>
+                        <option value="mini">Mini</option>
+                        <option value="pequeño">Pequeño</option>
+                        <option value="mediano">Mediano</option>
+                        <option value="grande">Grande</option>
+                        <option value="gigante">Gigante</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="container pb-4">
+                    <div class="row d-flex justify-content-center ">
+                      <button type="button" class="btn btn-warning border-0 col-4 container text-light boton-hov" data-bs-dismiss="modal">Cerrar</button>
+                      <button type="button" class="btn btn-warning border-0 col-4 container text-light boton-hov">Guardar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </nav>
+    <!-------------------------------------------------- MAIN -------------------------------------------------->
+    <main>
+      <!---------------------------- PERROS ---------------------------->
+      <div class="container mt-2">
+        <div class="container py-3">
+          <div class="row">
+            <h3 class="px-1 col-12 col-sm-3 col-md-2 col-lg-2 col-xl-1 d-flex align-self-center">Perros</h3>
+            <span class="px-1 col-1 d-flex justify-content-center align-self-center text-secondary"><ion-icon name="home-outline"></ion-icon></span>
+            <span class="px-1 col-3 col-sm-2 col-md-2 col-lg-1 d-flex justify-content-center align-self-center text-secondary">Tucumán</span>
+            <span class="px-1 col-3 col-sm-2 col-md-2 col-lg-1 d-flex justify-content-center align-self-center text-secondary">Jujuy</span>
+            <span class="px-1 col-3 col-sm-2 col-md-2 col-lg-1 d-flex justify-content-center align-self-center text-secondary">Córdoba</span>
+          </div>
+        </div>
+        <div class="row">
+          <!-- CARD 1 -->
+          <div class="card col-6 col-sm-4 col-lg-3 col-xxl-2 px-1 mb-2" style="padding: 0; border: 0;">
+            <img src="./img/cards/Perros/card1.jpg" class="card-img-top rounded-top" alt="foto">
+            <div class="container ps-2 region-card">
+              <img class="align-self-center" src="./img/icon arg.png" alt="Argentina" width="25px">
+              <small class="text-light align-self-center">Buenos Aires</small>
+            </div>
+            <div class="card-body border border-ligth rounded-bottom">
+              <div class="container px-0">
+                <div class="row">
+                  <span class="card-title text-nowrap col-6 fw-bold" style="font-size: 2.5vh;">Runa</span>
+                  <div class="d-flex col-6 justify-content-end">
+                    <label class="boton-fav">
+                      <input type="checkbox">
+                      <span><ion-icon name="heart"></ion-icon></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div style="height: 80px;">
+                <small><b class="text-secondary">Hembra</b></small>
+                <p class="card-text text-secondary" style="font-size: 1.6vh;">Muy buena compañera</p>
+              </div>
+              <a href="./pages/card1.html" class="btn btn-warning d-flex justify-content-center" style="font-size: 2vh;">ADOPTAR</a>
+            </div>
+          </div>
+            <!-- CARD 2 -->
+          <div class="card col-6 col-sm-4 col-lg-3 col-xxl-2 px-1 mb-2" style="padding: 0; border: 0;">
+            <img src="./img/cards/Perros/card2.jpg" class="card-img-top rounded-top" alt="foto">
+            <div class="container ps-2 region-card">
+              <img class="align-self-center" src="./img/icon arg.png" alt="Argentina" width="25px">
+              <small class="text-light align-self-center">Santa Fe</small>
+            </div>
+            <div class="card-body border border-ligth rounded-bottom">
+              <div class="container px-0">
+                <div class="row">
+                  <span class="card-title text-nowrap col-6 fw-bold" style="font-size: 2.5vh;">Tom</span>
+                  <div class="d-flex col-6 justify-content-end">
+                    <label class="boton-fav">
+                      <input type="checkbox">
+                      <span><ion-icon name="heart"></ion-icon></span>
+                    </label>
+                  </div>                  
+                </div>
+              </div>
+              <div style="height: 80px;">
+                <small><b class="text-secondary">Macho</b></small>
+                <p class="card-text text-secondary" style="font-size: 1.6vh;">Cariñoso y protector</p>
+              </div>
+              <a href="#" class="btn btn-warning d-flex justify-content-center" style="font-size: 2vh;">ADOPTAR</a>
+            </div>
+          </div>
+          <!-- CARD 3 -->
+          <div class="card col-6 col-sm-4 col-lg-3 col-xxl-2 px-1 mb-2" style="padding: 0; border: 0;">
+            <img src="./img/cards/Perros/card3.jpg" class="card-img-top rounded-top" alt="foto">
+            <div class="container ps-2 region-card">
+              <img class="align-self-center" src="./img/icon arg.png" alt="Argentina" width="25px">
+              <small class="text-light align-self-center">Corrientes</small>
+            </div>
+            <div class="card-body border border-ligth rounded-bottom">
+              <div class="container px-0">
+                <div class="row">
+                  <span class="card-title text-nowrap col-6 fw-bold" style="font-size: 2.5vh;">Bely</span>
+                  <div class="d-flex col-6 justify-content-end">
+                    <label class="boton-fav">
+                      <input type="checkbox">
+                      <span><ion-icon name="heart"></ion-icon></span>
+                    </label>
+                  </div>                  
+                </div>
+              </div>
+              <div style="height: 80px;">
+                <small><b class="text-secondary">Hembra</b></small>
+                <p class="card-text text-secondary" style="font-size: 1.6vh;">Fiel cuidadora</p>
+              </div>
+              <a href="#" class="btn btn-warning d-flex justify-content-center" style="font-size: 2vh;">ADOPTAR</a>
+            </div>
+          </div>
+          <!-- CARD 4 -->
+          <div class="card col-6 col-sm-4 col-lg-3 col-xxl-2 px-1 mb-2" style="padding: 0; border: 0;">
+            <img src="./img/cards/Perros/card4.jpg" class="card-img-top rounded-top" alt="foto">
+            <div class="container ps-2 region-card">
+              <img class="align-self-center" src="./img/icon arg.png" alt="Argentina" width="25px">
+              <small class="text-light align-self-center">Tucumán</small>
+            </div>
+            <div class="card-body border border-ligth rounded-bottom">
+              <div class="container px-0">
+                <div class="row">
+                  <span class="card-title text-nowrap col-6 fw-bold" style="font-size: 2.5vh;">Xuco</span>
+                  <div class="d-flex col-6 justify-content-end">
+                    <label class="boton-fav">
+                      <input type="checkbox">
+                      <span><ion-icon name="heart"></ion-icon></span>
+                    </label>
+                  </div>                  
+                </div>
+              </div>
+              <div style="height: 80px;">
+                <small><b class="text-secondary">Macho</b></small>
+                <p class="card-text text-secondary" style="font-size: 1.6vh;">Le encanta correr</p>
+              </div>
+              <a href="#" class="btn btn-warning d-flex justify-content-center" style="font-size: 2vh;">ADOPTAR</a>
+            </div>
+          </div>
+          <!-- CARD 5 -->
+          <div class="card col-6 col-sm-4 col-lg-3 col-xxl-2 px-1 mb-2" style="padding: 0; border: 0;">
+            <img src="./img/cards/Perros/card5.jpg" class="card-img-top rounded-top" alt="foto">
+            <div class="container ps-2 region-card">
+              <img class="align-self-center" src="./img/icon arg.png" alt="Argentina" width="25px">
+              <small class="text-light align-self-center">Tucumán</small>
+            </div>
+            <div class="card-body border border-ligth rounded-bottom">
+              <div class="container px-0">
+                <div class="row">
+                  <span class="card-title text-nowrap col-6 fw-bold" style="font-size: 2.5vh;">Nube</span>
+                  <div class="d-flex col-6 justify-content-end">
+                    <label class="boton-fav">
+                      <input type="checkbox">
+                      <span><ion-icon name="heart"></ion-icon></span>
+                    </label>
+                  </div>                  
+                </div>
+              </div>
+              <div style="height: 80px;">
+                <small><b class="text-secondary">Hembra</b></small>
+                <p class="card-text text-secondary" style="font-size: 1.6vh;">Muy juguetona, algo bruta</p>
+              </div>
+              <a href="#" class="btn btn-warning d-flex justify-content-center" style="font-size: 2vh;">ADOPTAR</a>
+            </div>
+          </div>
+          <!-- CARD 6 -->
+          <div class="card col-6 col-sm-4 col-lg-3 col-xxl-2 px-1 mb-2" style="padding: 0; border: 0;">
+            <img src="./img/cards/Perros/card6.jpg" class="card-img-top rounded-top" alt="foto">
+            <div class="container ps-2 region-card">
+              <img class="align-self-center" src="./img/icon arg.png" alt="Argentina" width="25px">
+              <small class="text-light align-self-center">Rosario</small>
+            </div>
+            <div class="card-body border border-ligth rounded-bottom">
+              <div class="container px-0">
+                <div class="row">
+                  <span class="card-title text-nowrap col-6 fw-bold" style="font-size: 2.5vh;">Angus</span>
+                  <div class="d-flex col-6 justify-content-end">
+                    <label class="boton-fav">
+                      <input type="checkbox">
+                      <span><ion-icon name="heart"></ion-icon></span>
+                    </label>
+                  </div>                  
+                </div>
+              </div>
+              <div style="height: 80px;">
+                <small><b class="text-secondary">Macho</b></small>
+                <p class="card-text text-secondary" style="font-size: 1.6vh;">Le encanta pasear</p>
+              </div>
+              <a href="#" class="btn btn-warning d-flex justify-content-center" style="font-size: 2vh;">ADOPTAR</a>
+            </div>
+          </div
+          ><!-- CARD 7 -->
+          <div class="card col-6 col-sm-4 col-lg-3 col-xxl-2 px-1 mb-2" style="padding: 0; border: 0;">
+            <img src="./img/cards/Perros/card7.jpg" class="card-img-top rounded-top" alt="foto">
+            <div class="container ps-2 region-card">
+              <img class="align-self-center" src="./img/icon arg.png" alt="Argentina" width="25px">
+              <small class="text-light align-self-center">Buenos Aires</small>
+            </div>
+            <div class="card-body border border-ligth rounded-bottom">
+              <div class="container px-0">
+                <div class="row">
+                  <span class="card-title text-nowrap col-6 fw-bold" style="font-size: 2.5vh;">Flaku</span>
+                  <div class="d-flex col-6 justify-content-end">
+                    <label class="boton-fav">
+                      <input type="checkbox">
+                      <span><ion-icon name="heart"></ion-icon></span>
+                    </label>
+                  </div>                  
+                </div>
+              </div>
+              <div style="height: 80px;">
+                <small><b class="text-secondary">Hembra</b></small>
+                <p class="card-text text-secondary" style="font-size: 1.6vh;">Muy tímida</p>
+              </div>
+              <a href="#" class="btn btn-warning d-flex justify-content-center" style="font-size: 2vh;">ADOPTAR</a>
+            </div>
+          </div>
+          <!-- CARD 8 -->
+          <div class="card col-6 col-sm-4 col-lg-3 col-xxl-2 px-1 mb-2" style="padding: 0; border: 0;">
+            <img src="./img/cards/Perros/card8.jpg" class="card-img-top rounded-top" alt="foto">
+            <div class="container ps-2 region-card">
+              <img class="align-self-center" src="./img/icon arg.png" alt="Argentina" width="25px">
+              <small class="text-light align-self-center">Córdoba</small>
+            </div>
+            <div class="card-body border border-ligth rounded-bottom">
+              <div class="container px-0">
+                <div class="row">
+                  <span class="card-title text-nowrap col-6 fw-bold" style="font-size: 2.5vh;">Mimba</span>
+                  <div class="d-flex col-6 justify-content-end">
+                    <label class="boton-fav">
+                      <input type="checkbox">
+                      <span><ion-icon name="heart"></ion-icon></span>
+                    </label>
+                  </div>                  
+                </div>
+              </div>
+              <div style="height: 80px;">
+                <small><b class="text-secondary">Hembra</b></small>
+                <p class="card-text text-secondary" style="font-size: 1.6vh;">Gruñona pero buena</p>
+              </div>
+              <a href="#" class="btn btn-warning d-flex justify-content-center" style="font-size: 2vh;">ADOPTAR</a>
+            </div>
+          </div>
+          <!-- CARD 9 -->
+          <div class="card col-6 col-sm-4 col-lg-3 col-xxl-2 px-1 mb-2" style="padding: 0; border: 0;">
+            <img src="./img/cards/Perros/card9.jpg" class="card-img-top rounded-top" alt="foto">
+            <div class="container ps-2 region-card">
+              <img class="align-self-center" src="./img/icon arg.png" alt="Argentina" width="25px">
+              <small class="text-light align-self-center">Salta</small>
+            </div>
+            <div class="card-body border border-ligth rounded-bottom">
+              <div class="container px-0">
+                <div class="row">
+                  <span class="card-title text-nowrap col-6 fw-bold" style="font-size: 2.5vh;">Sabba</span>
+                  <div class="d-flex col-6 justify-content-end">
+                    <label class="boton-fav">
+                      <input type="checkbox">
+                      <span><ion-icon name="heart"></ion-icon></span>
+                    </label>
+                  </div>                  
+                </div>
+              </div>
+              <div style="height: 80px;">
+                <small><b class="text-secondary">Hembra</b></small>
+                <p class="card-text text-secondary" style="font-size: 1.6vh;">Gran compañera</p>
+              </div>
+              <a href="#" class="btn btn-warning d-flex justify-content-center" style="font-size: 2vh;">ADOPTAR</a>
+            </div>
+          </div>
+          <!-- CARD 10 -->
+          <div class="card col-6 col-sm-4 col-lg-3 col-xxl-2 px-1 mb-2" style="padding: 0; border: 0;">
+            <img src="./img/cards/Perros/card10.jpg" class="card-img-top rounded-top" alt="foto">
+            <div class="container ps-2 region-card">
+              <img class="align-self-center" src="./img/icon arg.png" alt="Argentina" width="25px">
+              <small class="text-light align-self-center">Tucumán</small>
+            </div>
+            <div class="card-body border border-ligth rounded-bottom">
+              <div class="container px-0">
+                <div class="row">
+                  <span class="card-title text-nowrap col-6 fw-bold" style="font-size: 2.5vh;">Naruto</span>
+                  <div class="d-flex col-6 justify-content-end">
+                    <label class="boton-fav">
+                      <input type="checkbox">
+                      <span><ion-icon name="heart"></ion-icon></span>
+                    </label>
+                  </div>                  
+                </div>
+              </div>
+              <div style="height: 80px;">
+                <small><b class="text-secondary">Macho</b></small>
+                <p class="card-text text-secondary" style="font-size: 1.6vh;">Viejito pero jugueton</p>
+              </div>
+              <a href="#" class="btn btn-warning d-flex justify-content-center" style="font-size: 2vh;">ADOPTAR</a>
+            </div>
+          </div>
+          <!-- CARD 11 -->
+          <div class="card col-6 col-sm-4 col-lg-3 col-xxl-2 px-1 mb-2" style="padding: 0; border: 0;">
+            <img src="./img/cards/Perros/card11.jpg" class="card-img-top rounded-top" alt="foto">
+            <div class="container ps-2 region-card">
+              <img class="align-self-center" src="./img/icon arg.png" alt="Argentina" width="25px">
+              <small class="text-light align-self-center">Jujuy</small>
+            </div>
+            <div class="card-body border border-ligth rounded-bottom">
+              <div class="container px-0">
+                <div class="row">
+                  <span class="card-title text-nowrap col-6 fw-bold" style="font-size: 2.5vh;">Otto</span>
+                  <div class="d-flex col-6 justify-content-end">
+                    <label class="boton-fav">
+                      <input type="checkbox">
+                      <span><ion-icon name="heart"></ion-icon></span>
+                    </label>
+                  </div>                  
+                </div>
+              </div>
+              <div style="height: 80px;">
+                <small><b class="text-secondary">Macho</b></small>
+                <p class="card-text text-secondary" style="font-size: 1.6vh;">Incansable</p>
+              </div>
+              <a href="#" class="btn btn-warning d-flex justify-content-center" style="font-size: 2vh;">ADOPTAR</a>
+            </div>
+          </div>
+          <!-- CARD 12 -->
+          <div class="card col-6 col-sm-4 col-lg-3 col-xxl-2 px-1 mb-2" style="padding: 0; border: 0;">
+            <img src="./img/cards/Perros/card12.jpg" class="card-img-top rounded-top" alt="foto">
+            <div class="container ps-2 region-card">
+              <img class="align-self-center" src="./img/icon arg.png" alt="Argentina" width="25px">
+              <small class="text-light align-self-center">Córdoba</small>
+            </div>
+            <div class="card-body border border-ligth rounded-bottom">
+              <div class="container px-0">
+                <div class="row">
+                  <span class="card-title text-nowrap col-6 fw-bold" style="font-size: 2.5vh;">Trisky</span>
+                  <div class="d-flex col-6 justify-content-end">
+                    <label class="boton-fav">
+                      <input type="checkbox">
+                      <span><ion-icon name="heart"></ion-icon></span>
+                    </label>
+                  </div>                  
+                </div>
+              </div>
+              <div style="height: 80px;">
+                <small><b class="text-secondary">Macho</b></small>
+                <p class="card-text text-secondary" style="font-size: 1.6vh;">Le encanta jugar pelota</p>
+              </div>
+              <a href="#" class="btn btn-warning d-flex justify-content-center" style="font-size: 2vh;">ADOPTAR</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---------------------------- VER MÁS ---------------------------->
+      <div class="d-grid gap-2 col-4 mx-auto">
+        <a class="btn btn-secondary" href="./pages/allPets.html" role="button">VER MÁS</a>
+      </div>
+      <!---------------------------- PUBLICIDAD ---------------------------->
+      <img src="./img/flayer plubicitario.png" class="container-fluid px-0 mt-4" alt="...">
+      <!---------------------------- GATOS ---------------------------->
+      <div class="container mt-2">
+        <div class="container py-3">
+          <div class="row">
+            <h3 class="px-1 col-12 col-sm-3 col-md-2 col-lg-2 col-xl-1 d-flex align-self-center">Gatos</h3>
+            <span class="px-1 col-1 d-flex justify-content-center align-self-center text-secondary"><ion-icon name="home-outline"></ion-icon></span>
+            <span class="px-1 col-3 col-sm-2 col-md-2 col-lg-1 d-flex justify-content-center align-self-center text-secondary">Tucumán</span>
+            <span class="px-1 col-3 col-sm-2 col-md-2 col-lg-1 d-flex justify-content-center align-self-center text-secondary">Jujuy</span>
+            <span class="px-1 col-3 col-sm-2 col-md-2 col-lg-1 d-flex justify-content-center align-self-center text-secondary">Córdoba</span>
+          </div>
+        </div>
+        <div class="row">
+          <!-- CARD OTRO 1 -->
+          <div class="card col-6 col-sm-4 col-lg-3 col-xxl-2 px-1 mb-2" style="padding: 0; border: 0;">
+            <img src="./img/cards/Gatos/cardOtro1.jpg" class="card-img-top rounded-top" alt="foto">
+            <div class="container ps-2 region-card">
+              <img class="align-self-center" src="./img/icon arg.png" alt="Argentina" width="25px">
+              <small class="text-light align-self-center">Buenos Aires</small>
+            </div>
+            <div class="card-body border border-ligth rounded-bottom">
+              <div class="container px-0">
+                <div class="row">
+                  <span class="card-title text-nowrap col-6 fw-bold" style="font-size: 2.5vh;">Bagra</span>
+                  <div class="d-flex col-6 justify-content-end">
+                    <label class="boton-fav">
+                      <input type="checkbox">
+                      <span><ion-icon name="heart"></ion-icon></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div style="height: 80px;">
+                <small><b class="text-secondary">Hembra</b></small>
+                <p class="card-text text-secondary" style="font-size: 1.6vh;">Silenciosa y solitaria</p>
+              </div>
+              <a href="#" class="btn btn-warning d-flex justify-content-center" style="font-size: 2vh;">ADOPTAR</a>
+            </div>
+          </div>
+          <!-- CARD OTRO 2 -->
+          <div class="card col-6 col-sm-4 col-lg-3 col-xxl-2 px-1 mb-2" style="padding: 0; border: 0;">
+            <img src="./img/cards/Gatos/cardOtro2.jpg" class="card-img-top rounded-top" alt="foto">
+            <div class="container ps-2 region-card">
+              <img class="align-self-center" src="./img/icon arg.png" alt="Argentina" width="25px">
+              <small class="text-light align-self-center">Tucumán</small>
+            </div>
+            <div class="card-body border border-ligth rounded-bottom">
+              <div class="container px-0">
+                <div class="row">
+                  <span class="card-title text-nowrap col-6 fw-bold" style="font-size: 2.5vh;">Grisina</span>
+                  <div class="d-flex col-6 justify-content-end">
+                    <label class="boton-fav">
+                      <input type="checkbox">
+                      <span><ion-icon name="heart"></ion-icon></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div style="height: 80px;">
+                <small><b class="text-secondary">Hembra</b></small>
+                <p class="card-text text-secondary" style="font-size: 1.6vh;">Distraída y torpe</p>
+              </div>
+              <a href="#" class="btn btn-warning d-flex justify-content-center" style="font-size: 2vh;">ADOPTAR</a>
+            </div>
+          </div>
+          <!-- CARD OTRO 3 -->
+          <div class="card col-6 col-sm-4 col-lg-3 col-xxl-2 px-1 mb-2" style="padding: 0; border: 0;">
+            <img src="./img/cards/Gatos/cardOtro3.jpg" class="card-img-top rounded-top" alt="foto">
+            <div class="container ps-2 region-card">
+              <img class="align-self-center" src="./img/icon arg.png" alt="Argentina" width="25px">
+              <small class="text-light align-self-center">Salta</small>
+            </div>
+            <div class="card-body border border-ligth rounded-bottom">
+              <div class="container px-0">
+                <div class="row">
+                  <span class="card-title text-nowrap col-6 fw-bold" style="font-size: 2.5vh;">Fastuc</span>
+                  <div class="d-flex col-6 justify-content-end">
+                    <label class="boton-fav">
+                      <input type="checkbox">
+                      <span><ion-icon name="heart"></ion-icon></span>
+                    </label>
+                  </div>                  
+                </div>
+              </div>
+              <div style="height: 80px;">
+                <small><b class="text-secondary">Macho</b></small>
+                <p class="card-text text-secondary" style="font-size: 1.6vh;">Haragán y come mucho</p>
+              </div>
+              <a href="#" class="btn btn-warning d-flex justify-content-center" style="font-size: 2vh;">ADOPTAR</a>
+            </div>
+          </div>
+          <!-- CARD OTRO 4 -->
+          <div class="card col-6 col-sm-4 col-lg-3 col-xxl-2 px-1 mb-2" style="padding: 0; border: 0;">
+            <img src="./img/cards/Gatos/cardOtro4.jpg" class="card-img-top rounded-top" alt="foto">
+            <div class="container ps-2 region-card">
+              <img class="align-self-center" src="./img/icon arg.png" alt="Argentina" width="25px">
+              <small class="text-light align-self-center">Jujuy</small>
+            </div>
+            <div class="card-body border border-ligth rounded-bottom">
+              <div class="container px-0">
+                <div class="row">
+                  <span class="card-title text-nowrap col-6 fw-bold" style="font-size: 2.5vh;">Yng</span>
+                  <div class="d-flex col-6 justify-content-end">
+                    <label class="boton-fav">
+                      <input type="checkbox">
+                      <span><ion-icon name="heart"></ion-icon></span>
+                    </label>
+                  </div>                  
+                </div>
+              </div>
+              <div style="height: 80px;">
+                <small><b class="text-secondary">Macho</b></small>
+                <p class="card-text text-secondary" style="font-size: 1.6vh;">Un bebé jugueton</p>
+              </div>
+              <a href="#" class="btn btn-warning d-flex justify-content-center" style="font-size: 2vh;">ADOPTAR</a>
+            </div>
+          </div>
+          <!-- CARD OTRO 5 -->
+          <div class="card col-6 col-sm-4 col-lg-3 col-xxl-2 px-1 mb-2" style="padding: 0; border: 0;">
+            <img src="./img/cards/Gatos/cardOtro5.jpg" class="card-img-top rounded-top" alt="foto">
+            <div class="container ps-2 region-card">
+              <img class="align-self-center" src="./img/icon arg.png" alt="Argentina" width="25px">
+              <small class="text-light align-self-center">Tucumán</small>
+            </div>
+            <div class="card-body border border-ligth rounded-bottom">
+              <div class="container px-0">
+                <div class="row">
+                  <span class="card-title text-nowrap col-6 fw-bold" style="font-size: 2.5vh;">Luz</span>
+                  <div class="d-flex col-6 justify-content-end">
+                    <label class="boton-fav">
+                      <input type="checkbox">
+                      <span><ion-icon name="heart"></ion-icon></span>
+                    </label>
+                  </div>                  
+                </div>
+              </div>
+              <div style="height: 80px;">
+                <small><b class="text-secondary">Hembra</b></small>
+                <p class="card-text text-secondary" style="font-size: 1.6vh;">Sorpresiva y exaltada</p>
+              </div>
+              <a href="#" class="btn btn-warning d-flex justify-content-center" style="font-size: 2vh;">ADOPTAR</a>
+            </div>
+          </div>
+          <!-- CARD OTRO 6 -->
+          <div class="card col-6 col-sm-4 col-lg-3 col-xxl-2 px-1 mb-2" style="padding: 0; border: 0;">
+            <img src="./img/cards/Gatos/cardOtro6.jpg" class="card-img-top rounded-top" alt="foto">
+            <div class="container ps-2 region-card">
+              <img class="align-self-center" src="./img/icon arg.png" alt="Argentina" width="25px">
+              <small class="text-light align-self-center">Córdoba</small>
+            </div>
+            <div class="card-body border border-ligth rounded-bottom">
+              <div class="container px-0">
+                <div class="row">
+                  <span class="card-title text-nowrap col-6 fw-bold" style="font-size: 2.5vh;">Fede</span>
+                  <div class="d-flex col-6 justify-content-end">
+                    <label class="boton-fav">
+                      <input type="checkbox">
+                      <span><ion-icon name="heart"></ion-icon></span>
+                    </label>
+                  </div>                  
+                </div>
+              </div>
+              <div style="height: 80px;">
+                <small><b class="text-secondary">Macho</b></small>
+                <p class="card-text text-secondary" style="font-size: 1.6vh;">Trepa todo lo que ve</p>
+              </div>
+              <a href="#" class="btn btn-warning d-flex justify-content-center" style="font-size: 2vh;">ADOPTAR</a>
+            </div>
+          </div>
+          <!-- CARD OTRO 7 -->
+          <div class="card col-6 col-sm-4 col-lg-3 col-xxl-2 px-1 mb-2" style="padding: 0; border: 0;">
+            <img src="./img/cards/Gatos/cardOtro7.jpg" class="card-img-top rounded-top" alt="foto">
+            <div class="container ps-2 region-card">
+              <img class="align-self-center" src="./img/icon arg.png" alt="Argentina" width="25px">
+              <small class="text-light align-self-center">Chaco</small>
+            </div>
+            <div class="card-body border border-ligth rounded-bottom">
+              <div class="container px-0">
+                <div class="row">
+                  <span class="card-title text-nowrap col-6 fw-bold" style="font-size: 2.5vh;">Genio</span>
+                  <div class="d-flex col-6 justify-content-end">
+                    <label class="boton-fav">
+                      <input type="checkbox">
+                      <span><ion-icon name="heart"></ion-icon></span>
+                    </label>
+                  </div>                  
+                </div>
+              </div>
+              <div style="height: 80px;">
+                <small><b class="text-secondary">Macho</b></small>
+                <p class="card-text text-secondary" style="font-size: 1.6vh;">Torpe y bruto</p>
+              </div>
+              <a href="#" class="btn btn-warning d-flex justify-content-center" style="font-size: 2vh;">ADOPTAR</a>
+            </div>
+          </div>
+          <!-- CARD OTRO 8 -->
+          <div class="card col-6 col-sm-4 col-lg-3 col-xxl-2 px-1 mb-2" style="padding: 0; border: 0;">
+            <img src="./img/cards/Gatos/cardOtro8.jpg" class="card-img-top rounded-top" alt="foto">
+            <div class="container ps-2 region-card">
+              <img class="align-self-center" src="./img/icon arg.png" alt="Argentina" width="25px">
+              <small class="text-light align-self-center">Jujuy</small>
+            </div>
+            <div class="card-body border border-ligth rounded-bottom">
+              <div class="container px-0">
+                <div class="row">
+                  <span class="card-title text-nowrap col-6 fw-bold" style="font-size: 2.5vh;">Rita</span>
+                  <div class="d-flex col-6 justify-content-end">
+                    <label class="boton-fav">
+                      <input type="checkbox">
+                      <span><ion-icon name="heart"></ion-icon></span>
+                    </label>
+                  </div>                  
+                </div>
+              </div>
+              <div style="height: 80px;">
+                <small><b class="text-secondary">Hembra</b></small>
+                <p class="card-text text-secondary" style="font-size: 1.6vh;">Engañosas y juguetona</p>
+              </div>
+              <a href="#" class="btn btn-warning d-flex justify-content-center" style="font-size: 2vh;">ADOPTAR</a>
+            </div>
+          </div>
+          <!-- CARD OTRO 9 -->
+          <div class="card col-6 col-sm-4 col-lg-3 col-xxl-2 px-1 mb-2" style="padding: 0; border: 0;">
+            <img src="./img/cards/Gatos/cardOtro9.jpg" class="card-img-top rounded-top" alt="foto">
+            <div class="container ps-2 region-card">
+              <img class="align-self-center" src="./img/icon arg.png" alt="Argentina" width="25px">
+              <small class="text-light align-self-center">Tucumán</small>
+            </div>
+            <div class="card-body border border-ligth rounded-bottom">
+              <div class="container px-0">
+                <div class="row">
+                  <span class="card-title text-nowrap col-6 fw-bold" style="font-size: 2.5vh;">Tragón</span>
+                  <div class="d-flex col-6 justify-content-end">
+                    <label class="boton-fav">
+                      <input type="checkbox">
+                      <span><ion-icon name="heart"></ion-icon></span>
+                    </label>
+                  </div>                  
+                </div>
+              </div>
+              <div style="height: 80px;">
+                <small><b class="text-secondary">Macho</b></small>
+                <p class="card-text text-secondary" style="font-size: 1.6vh;">Le encanta comer de todo</p>
+              </div>
+              <a href="#" class="btn btn-warning d-flex justify-content-center" style="font-size: 2vh;">ADOPTAR</a>
+            </div>
+          </div>
+          <!-- CARD OTRO 10 -->
+          <div class="card col-6 col-sm-4 col-lg-3 col-xxl-2 px-1 mb-2" style="padding: 0; border: 0;">
+            <img src="./img/cards/Gatos/cardOtro10.jpg" class="card-img-top rounded-top" alt="foto">
+            <div class="container ps-2 region-card">
+              <img class="align-self-center" src="./img/icon arg.png" alt="Argentina" width="25px">
+              <small class="text-light align-self-center">Buenos Aires</small>
+            </div>
+            <div class="card-body border border-ligth rounded-bottom">
+              <div class="container px-0">
+                <div class="row">
+                  <span class="card-title text-nowrap col-6 fw-bold" style="font-size: 2.5vh;">Luna</span>
+                  <div class="d-flex col-6 justify-content-end">
+                    <label class="boton-fav">
+                      <input type="checkbox">
+                      <span><ion-icon name="heart"></ion-icon></span>
+                    </label>
+                  </div>                  
+                </div>
+              </div>
+              <div style="height: 80px;">
+                <small><b class="text-secondary">Hembra</b></small>
+                <p class="card-text text-secondary" style="font-size: 1.6vh;">Una bebé hermosa</p>
+              </div>
+              <a href="#" class="btn btn-warning d-flex justify-content-center" style="font-size: 2vh;">ADOPTAR</a>
+            </div>
+          </div>
+          <!-- CARD OTRO 11 -->
+          <div class="card col-6 col-sm-4 col-lg-3 col-xxl-2 px-1 mb-2" style="padding: 0; border: 0;">
+            <img src="./img/cards/Gatos/cardOtro11.jpg" class="card-img-top rounded-top" alt="foto">
+            <div class="container ps-2 region-card">
+              <img class="align-self-center" src="./img/icon arg.png" alt="Argentina" width="25px">
+              <small class="text-light align-self-center">Santa Fe</small>
+            </div>
+            <div class="card-body border border-ligth rounded-bottom">
+              <div class="container px-0">
+                <div class="row">
+                  <span class="card-title text-nowrap col-6 fw-bold" style="font-size: 2.5vh;">Pinchi</span>
+                  <div class="d-flex col-6 justify-content-end">
+                    <label class="boton-fav">
+                      <input type="checkbox">
+                      <span><ion-icon name="heart"></ion-icon></span>
+                    </label>
+                  </div>                  
+                </div>
+              </div>
+              <div style="height: 80px;">
+                <small><b class="text-secondary">Hembra</b></small>
+                <p class="card-text text-secondary" style="font-size: 1.6vh;">Sumisa y amorosa</p>
+              </div>
+              <a href="#" class="btn btn-warning d-flex justify-content-center" style="font-size: 2vh;">ADOPTAR</a>
+            </div>
+          </div>
+          <!-- CARD OTRO 12 -->
+          <div class="card col-6 col-sm-4 col-lg-3 col-xxl-2 px-1 mb-2" style="padding: 0; border: 0;">
+            <img src="./img/cards/Gatos/cardOtro12.jpg" class="card-img-top rounded-top" alt="foto">
+            <div class="container ps-2 region-card">
+              <img class="align-self-center" src="./img/icon arg.png" alt="Argentina" width="25px">
+              <small class="text-light align-self-center">Mendoza</small>
+            </div>
+            <div class="card-body border border-ligth rounded-bottom">
+              <div class="container px-0">
+                <div class="row">
+                  <span class="card-title text-nowrap col-6 fw-bold" style="font-size: 2.5vh;">Larita</span>
+                  <div class="d-flex col-6 justify-content-end">
+                    <label class="boton-fav">
+                      <input type="checkbox">
+                      <span><ion-icon name="heart"></ion-icon></span>
+                    </label>
+                  </div>                  
+                </div>
+              </div>
+              <div style="height: 80px;">
+                <small><b class="text-secondary">Hembra</b></small>
+                <p class="card-text text-secondary" style="font-size: 1.6vh;">No molesta para nada</p>
+              </div>
+              <a href="#" class="btn btn-warning d-flex justify-content-center" style="font-size: 2vh;">ADOPTAR</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---------------------------- VER MÁS ---------------------------->
+      <div class="d-grid gap-2 col-4 mx-auto">
+        <a class="btn btn-secondary" href="./pages/allPets.html" role="button">VER MÁS</a>
+      </div>
+      <!---------------------------- CARRUSEL ---------------------------->
+      <div class="container px-0 my-5">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="container col-10 col-md-9">
+                <div class="row">
+                  <iframe height="450"
+                  src="https://www.youtube.com/embed/P-FCZWuUDDI"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                  </iframe>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="container col-10 col-md-9">
+                <div class="row">
+                  <iframe height="450"
+                  src="https://www.youtube.com/embed/X9QxvAaf_kY"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                  </iframe>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="container col-10 col-md-9">
+                <div class="row">
+                  <iframe height="450"
+                  src="https://www.youtube.com/embed/7q7SC_xYYKk"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                  </iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev prev-icon" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next next-icon" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </main>
+    <!-------------------------------------------------- FOOTER -------------------------------------------------->
+      <img class="container-fluid d-flex col-12 col-sm-10 col-md-8 col-lg-6 gato-ac" src="./img/cat.png" alt="gato acostado">
+    <footer class="bg-secondary text-light">
+      <div class=" container-fluid bbot-fondo" style="height: 30px;"></div>
+      <div class="container">
+        <div class="row py-3">
+          <div class="container text-center col-12 pb-3 mt-3">
+            <div class="container col-12 col-lg-10 region-card">
+              <h5 class="text-light" id="nosotros">QUIENES SOMOS</h5>
+              <p>La Fundación Huellitas es una entidad solidaria 
+              creada en Tucumán, Argentina,
+              con el objetivo de ayudar a los animales sin hogar.
+              La Fundación tiene la misión principal de rescatar perros y gatos en riesgo,
+              y buscarles un hogar definitivo. 
+              Otro objetivo de la Fundación es llevar a cabo acciones de difusión y concientización 
+              sobre las responsabilidades inherentes a la tenencia de un animal de compañía.
+              </p>
+            </div>
+          </div>
+          <hr class="container text-light">
+          <br>
+          <div class="container col-12 col-sm-8 col-md-5 col-xl-4 col-xxl-3 py-2">
+            <div class="row text-decoration-none px-3">
+              <h5 class="text-light col-12 text-center fs-5 mt-2 region-card">ANIMALES EN ADOPCIÓN</h5>
+              <div class="container">
+                <div class="row">
+                  <img class="col-6" src="./img/perro adulto.png" alt="perro adulto">
+                  <a class="text-decoration-none text-light col-6 align-self-center" href="./pages/allPets.html">Perros Adultos</a>
+                </div>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <a class="text-decoration-none text-light col-7 align-self-center d-flex justify-content-end" href="./pages/allPets.html">Perros Cachorros</a>
+                  <img class="col-5" src="./img/perro cachorro.png" alt="perro adulto">
+                </div>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <img class="col-6" src="./img/gato adulto.png" alt="perro adulto">
+                  <a class="text-decoration-none text-light col-6 align-self-center" href="./pages/allPets.html">Gatos Adultos</a>
+                </div>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <a class="text-decoration-none text-light col-7 align-self-center d-flex justify-content-end" href="./pages/allPets.html">Gatos Cachorros</a>
+                  <img class="col-5" src="./img/gato cachorro.png" alt="perro adulto">
+                </div>
+              </div>
+            </div>        
+          </div>
+          <div class="container col-12 col-sm-8 col-md-5 col-xl-4 col-xxl-3 py-2 text-center">
+            <div class="row">
+              <h5 class="text-light fs-5 mt-2 region-card" id="contacto">CONTACTO</h5>
+              <a href="https://www.facebook.com/"><img class="container px-0 pb-3" src="./img/facebook.png" alt="Facebook"></a>
+              <a href="https://www.instagram.com/"><img class="container px-0 pb-3" src="./img/instagram.png" alt="Instagram"></a>
+              <a href="https://www.whatsapp.com/"><img class="container px-0 pb-3" src="./img/whatsapp.png" alt="WhatsApp"></a>
+              <a href="https://mail.google.com/"><img class="container px-0 pb-3" src="./img/gmail.png" alt="E-Mail"></a>
+            </div>
+          </div>
+          <div class="container col-12 col-xxl-4 d-flex align-items-between">
+            <div class="row d-flex justify-content-center">
+              <div class="d-flex py-2 col-12 col-sm-5 col-lg-3 col-xxl-6 justify-content-center align-items-center px-0">
+                <img src="./img/logo blanco.png" alt="logo" width="200">
+              </div>
+              <div class="d-flex py-2 col-12 col-sm-5 col-lg-3 col-xxl-6 justify-content-center align-items-center px-0">
+                <img src="./img/unidad animal.png" alt="logo unidad animal" width="150">
+              </div>
+              <div class="d-flex py-2 col-12 col-sm-5 col-lg-3 col-xxl-6 justify-content-center align-items-center px-0">
+                <img src="./img/arca logo.png" alt="logo arca" width="150">
+              </div>
+              <div class="d-flex py-2 col-12 col-sm-5 col-lg-12 col-xxl-6 justify-content-center align-items-center px-0" style="font-size: 0.85rem;">
+                <small class="text-center">Trabajando en conjunto con fundaciones internacionales para mejorar el desempeño de nuestro servicio a la comunidad animal.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid text-center py-2 bbot-fondo">
+          <small>2022. Todos los derechos reservados ©<b>Huellitas</b></small>
+      </div>
+    </footer>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous">
+      </script>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

@@ -1,0 +1,154 @@
+/* -------------------------------------------------- HEADER -------------------------------------------------- */
+.btop-fondo{
+  background-image: url("../img/background\ yellow.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.navbar-fix {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 2;
+}
+.modal-backdrop {
+  z-index: 1;
+}
+.boton-hov:hover {
+  background-color: gray;
+  color: white;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.modal-bg {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+}
+.card-login {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+.boton-h1:hover {
+  background: #212529;
+  color: white;
+}
+.boton-h2:hover {
+  background: #ffc107;
+}
+.nav-link:hover{
+  background: #ffc107;
+  transform: scale(1.1);
+  transition: 0.5s;
+  border-radius: 5px;
+}
+.registrate{
+  font-size: 14px;
+}
+.registrate-aqui{
+  font-size: 14px;
+  padding-top: 0;
+  padding-bottom: 4px;
+}
+/* -------------------------------------------------- MAIN   -------------------------------------------------- */
+.carousel-control-prev-icon {
+  background-image: url("../img/icon\ prev.svg");
+  height: 5vh;
+  width: 1rem;
+}
+.carousel-control-next-icon {
+  background-image: url("../img/icon\ next.svg");
+  height: 5vh;
+  width: 1rem;
+}
+.region-card {
+  margin-top: -25px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: normal;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  -webkit-text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  -moz-text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+/* ---------- BOTON DE FAVORITO ---------- */
+.boton-fav {
+  position: relative;
+  width: 50px;
+  height: 25px;
+  background: rgb(222, 222, 222);
+  border-radius: 20px;
+}
+.boton-fav input {
+  appearance: none;
+}
+.boton-fav span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background: #333;
+  border: 6px solid #212121;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boton-fav input:checked ~ span {
+  left: 25px;
+}
+.boton-fav span ion-icon {
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 2em;
+  transition: 0.5s;
+}
+.boton-fav input:checked ~ span ion-icon {
+  color: red;
+  filter: drop-shadow(0 0 5px red);
+}
+/* -------------------------------------------------- FOOTER -------------------------------------------------- */
+.bbot-fondo{
+  background-image: url("../img/background\ gray.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+/* --------- Media Queries --------- */
+@media (min-width: 320px) {
+  .gato-ac {
+    margin-bottom: -74px;
+  }
+}
+@media (min-width: 576px) {
+  .gato-ac {
+    margin-bottom: -98px;
+  }
+}
+@media (min-width: 768px) {
+  .gato-ac {
+    margin-bottom: -103px;
+  }
+}
+@media (min-width: 992px) {
+  .gato-ac {
+    margin-bottom: -101px;
+  }
+}
+@media (min-width: 1200px) {
+  .gato-ac {
+    margin-bottom: -116px;
+  }
+}
+@media (min-width: 1400px) {
+  .gato-ac {
+    margin-bottom: -133px;
+  }
+}
+@media (min-width: 1920px) {
+  .gato-ac {
+    margin-bottom: -169px;
+  }
+}
