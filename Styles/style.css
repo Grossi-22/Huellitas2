@@ -1,9 +1,4 @@
 /* -------------------------------------------------- HEADER -------------------------------------------------- */
-.btop-fondo{
-  background-image: url("../img/background\ yellow.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
 .navbar-fix {
   position: sticky;
   position: -webkit-sticky;
@@ -109,12 +104,6 @@
 .boton-fav input:checked ~ span ion-icon {
   color: red;
   filter: drop-shadow(0 0 5px red);
-}
-/* -------------------------------------------------- FOOTER -------------------------------------------------- */
-.bbot-fondo{
-  background-image: url("../img/background\ gray.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
 }
 /* --------- Media Queries --------- */
 @media (min-width: 320px) {
